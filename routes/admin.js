@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { Router } = require("express");
 const adminRouter = Router();
 const { adminModel, courseModel } = require("../db");
@@ -107,4 +108,47 @@ adminRouter.get("/course/bulk", adminMiddleware,async function(req, res) {
 
 module.exports = {
     adminRouter: adminRouter
+=======
+const {Router}=require("express");
+
+const adminRouter=Router();
+
+const {adminmodel}=require("../db");
+
+adminRouter.post("/signup",function(req,res){
+    res.json({
+        message:"signup endpoint"
+    })
+})
+
+adminRouter.post("/signin",function(req,res){
+    res.json({
+        message:"signin endpoint"
+    })
+})
+
+adminRouter.post("/course",function(req,res){
+
+    res.json({
+        message:"This is course enpoint"
+    })
+})
+
+adminRouter.put("/course",function(req,res){
+    res.json({
+
+        message:"This is also course enpoint"
+    })
+})
+
+adminRouter.get("/course/bulk",function(req,res){
+    res.json({
+
+        message:"This is also course enpoint"
+    })
+})
+
+module.exports={
+    adminRouter:adminRouter
+>>>>>>> e3c61411f17f5e5813b4a5d93d1233340d013636
 }

@@ -1,4 +1,5 @@
 const { Router } = require("express");
+<<<<<<< HEAD
 const { userMiddleware } = require("../middleware/user");
 const { purchaseModel, courseModel } = require("../db")
 const courseRouter = Router();
@@ -24,6 +25,20 @@ courseRouter.get("/preview", async function(req, res) {
 
     res.json({
         courses
+=======
+const courseRouter = Router();
+
+courseRouter.post("/purchase", function(req, res) {
+    // you would expect the user to pay you money
+    res.json({
+        message: "signup endpoint"
+    })
+})
+
+courseRouter.get("/preview", function(req, res) {
+    res.json({
+        message: "course preview endpoint"
+>>>>>>> e3c61411f17f5e5813b4a5d93d1233340d013636
     })
 })
 
